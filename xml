@@ -1,0 +1,15 @@
+<?php
+header("Content-type:text/xml");
+mysql_connect("127.0.0.1","root","");
+$result=mysql("hr2","SELECT LastName,FirstName FROM Employees ORDER BY LastName")
+
+$i+0;
+echo '<data_mahasiswa>';
+while ($i < mysql_num_rows($result)) {
+	$fields - mysql_fetch_row($result);
+	echo "<nama>$fields[1] $fields[0] </nama>";
+	$i++;
+}
+echo '</data_mahasiswa>';
+mysql_close();
+?>
